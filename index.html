@@ -10,12 +10,7 @@
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{
-font-family:'Poppins',sans-serif;
-background:#f5f1ea;
-color:#222;
-overflow-x:hidden;
-}
+body{font-family:'Poppins',sans-serif;background:#f5f1ea;color:#222;overflow-x:hidden;}
 
 /* TOP BAR */
 .topbar{
@@ -27,7 +22,7 @@ display:flex;
 justify-content:space-between;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 position:fixed;
 top:32px;
@@ -36,19 +31,13 @@ padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(245,241,234,0.9);
-backdrop-filter:blur(10px);
-transition:0.3s;
+background:rgba(245,241,234,0.95);
+backdrop-filter:blur(8px);
 z-index:999;
-}
-nav.scrolled{
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-padding:12px 8%;
 }
 .logo{
 font-family:'Playfair Display',serif;
 font-size:22px;
-font-weight:700;
 color:#0f2a52;
 }
 
@@ -58,36 +47,21 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:180px 8% 120px;
-position:relative;
 }
-.hero::before{
-content:"";
-position:absolute;
-right:-120px;
-top:-100px;
-width:500px;
-height:500px;
-background:radial-gradient(circle,#0f2a5230,transparent 70%);
-animation:pulse 5s infinite;
-}
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
-}
-
 .hero-text h1{
 font-family:'Playfair Display',serif;
-font-size:64px;
+font-size:62px;
 color:#0f2a52;
 margin-bottom:20px;
 }
 .hero-text p{
-max-width:520px;
-color:#555;
+max-width:500px;
 margin-bottom:30px;
+color:#555;
 }
+
 .hero-buttons{display:flex;gap:20px;}
+
 .btn{
 padding:14px 28px;
 border-radius:30px;
@@ -96,17 +70,20 @@ font-weight:500;
 cursor:pointer;
 transition:0.3s;
 }
+
 .primary{background:#0f2a52;color:white;}
 .secondary{background:#25D366;color:white;}
+
 .btn:hover{
 transform:translateY(-4px);
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
+/* Smaller Image */
 .hero-img img{
-width:85%;
+width:70%;
 border-radius:15px;
-box-shadow:0 20px 60px rgba(0,0,0,0.15);
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
 }
 
 /* SECTION */
@@ -118,41 +95,29 @@ color:#0f2a52;
 margin-bottom:20px;
 }
 
-/* AI SECTION */
-.ai-section{
-background:white;
-text-align:center;
-}
-.ai-section p{
-max-width:850px;
-margin:auto;
-line-height:1.8;
-color:#555;
-}
-
 /* SERVICES */
-.services{
-background:#fafafa;
-text-align:center;
-}
+.services{text-align:center;background:#fafafa;}
 .service-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
 margin-top:40px;
 }
+
 .service{
 padding:30px;
 border-radius:15px;
 color:white;
 transition:0.4s;
 }
+
 .service:nth-child(1){background:#0f2a52;}
 .service:nth-child(2){background:#1f4068;}
 .service:nth-child(3){background:#162447;}
+
 .service:hover{
 transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(15,42,82,0.2);
+box-shadow:0 20px 50px rgba(15,42,82,0.25);
 }
 
 /* DOCTOR */
@@ -162,7 +127,8 @@ align-items:center;
 gap:60px;
 }
 .doctor img{
-width:240px;height:240px;
+width:220px;
+height:220px;
 border-radius:50%;
 object-fit:cover;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
@@ -170,23 +136,6 @@ box-shadow:0 15px 40px rgba(0,0,0,0.15);
 .doctor-text p{
 line-height:1.8;
 color:#555;
-}
-
-/* REVIEWS */
-.reviews{
-text-align:center;
-}
-.review-box{
-display:flex;
-gap:30px;
-margin-top:40px;
-}
-.review{
-flex:1;
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* APPOINTMENT */
@@ -223,7 +172,7 @@ border-radius:15px;
 overflow:hidden;
 }
 
-/* FLOATING BUTTONS */
+/* FLOATING */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -236,6 +185,7 @@ text-decoration:none;
 font-weight:500;
 box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
+
 .location-badge{
 position:fixed;
 bottom:20px;
@@ -253,7 +203,6 @@ box-shadow:0 10px 25px rgba(0,0,0,0.2);
 .hero{flex-direction:column;text-align:center;}
 .hero-img{text-align:center;margin-top:40px;}
 .service-grid{grid-template-columns:1fr;}
-.review-box{flex-direction:column;}
 .doctor{flex-direction:column;text-align:center;}
 .map{width:100%;}
 footer{flex-direction:column;}
@@ -266,7 +215,7 @@ footer{flex-direction:column;}
 
 <div class="topbar">
 <span>AI Maxillofacial Dentistry</span>
-<span>Ramakrishna Rd, Seerangapalayam, Salem – 636007</span>
+<span>Ramakrishna Rd, Salem – 636007</span>
 </div>
 
 <nav>
@@ -277,43 +226,51 @@ footer{flex-direction:column;}
 <div class="hero-text">
 <h1>Precision. Innovation. Painless Care.</h1>
 <p>
-Experience next-generation AI-powered maxillofacial dentistry with imported robotic systems delivering unmatched accuracy and comfort.
+Experience AI-powered robotic dentistry delivering extreme accuracy,
+minimal discomfort and faster healing.
 </p>
+
 <div class="hero-buttons">
-<button class="btn primary">Book Appointment</button>
+<a href="#appointment"><button class="btn primary">Book Appointment</button></a>
 <button class="btn secondary">Call Now</button>
 </div>
+
 </div>
+
 <div class="hero-img">
 <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
 </div>
 </section>
 
-<section class="ai-section">
-<h2>Advanced AI & Robotic Dentistry</h2>
-<p>
-At AI Maxillofacial Dentistry, we combine imported foreign robotic systems with AI-driven digital scanning and 3D treatment planning.
-Every procedure is digitally mapped before execution, ensuring extreme precision and minimal discomfort.
-From complex maxillofacial corrections to cosmetic smile enhancements, technology supports every decision.
-Our sterile, hygienic and digitally advanced environment ensures faster recovery, safer outcomes and world-class results.
-</p>
-</section>
-
 <section class="services">
 <h2>Our Premium Services</h2>
+
 <div class="service-grid">
+
 <div class="service">
 <h3>AI Guided Dental Implants</h3>
-<p>3D planning and robotic precision placement for permanent, natural-looking results with long-term stability.</p>
+<p>
+3D robotic precision placement.<br>
+Permanent natural-looking results.
+</p>
 </div>
+
 <div class="service">
 <h3>Invisalign & Clear Aligners</h3>
-<p>Digitally designed invisible braces using AI tracking for accurate, comfortable and predictable alignment.</p>
+<p>
+Digitally designed invisible braces.<br>
+Comfortable and predictable alignment.
+</p>
 </div>
+
 <div class="service">
 <h3>Cosmetic Smile Design</h3>
-<p>Advanced aesthetic corrections powered by digital imaging for confident and radiant smiles.</p>
+<p>
+Advanced aesthetic corrections.<br>
+Confident radiant smiles.
+</p>
 </div>
+
 </div>
 </section>
 
@@ -322,28 +279,14 @@ Our sterile, hygienic and digitally advanced environment ensures faster recovery
 <div class="doctor-text">
 <h2>Dr. Abu Imraan</h2>
 <p>
-Dr. Abu Imraan is a leading AI-assisted maxillofacial specialist known for combining advanced robotic precision with years of clinical expertise.
-Patients appreciate his calm approach, clear explanations and commitment to painless treatment.
-His focus on digital accuracy and patient comfort makes the clinic one of the most trusted advanced dental centers in Salem.
+Dr. Abu Imraan combines advanced AI robotic precision with years of clinical expertise.
+Known for painless techniques and patient-focused care,
+he delivers world-class maxillofacial treatment in Salem.
 </p>
 </div>
 </section>
 
-<section class="reviews">
-<h2>5.0 ⭐ Rated Excellence</h2>
-<div class="review-box">
-<div class="review">
-<p>"The clinic is calm, clean and extremely advanced. Dr. Abu is very approachable and treatment was completely painless."</p>
-<strong>- Rithika Sri</strong>
-</div>
-<div class="review">
-<p>"My implant procedure was digitally planned and executed perfectly. Truly high class dentistry at affordable price."</p>
-<strong>- Naga Lingam</strong>
-</div>
-</div>
-</section>
-
-<section>
+<section id="appointment">
 <div class="appointment">
 <h2>Book Your Appointment</h2>
 <input type="text" placeholder="Full Name">
@@ -375,12 +318,6 @@ allowfullscreen>
 
 <a href="#" class="whatsapp">Chat on WhatsApp</a>
 <div class="location-badge">📍 Get Directions</div>
-
-<script>
-window.addEventListener("scroll",function(){
-document.querySelector("nav").classList.toggle("scrolled",window.scrollY>50);
-});
-</script>
 
 </body>
 </html>
