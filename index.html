@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Maxillofacial Dentistry | Salem</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f1ea;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(245,241,234,0.85);
+backdrop-filter:blur(12px);
+z-index:1000;
+transition:0.3s;
+}
+
+nav.scrolled{
+padding:12px 8%;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:22px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0%;
+height:2px;
+background:#111;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:160px 8% 100px;
+}
+
+.hero-text{
+flex:1;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.hero-text h1{
+font-family:'Playfair Display',serif;
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+color:#555;
+margin-bottom:30px;
+max-width:500px;
+}
+
+.hero-btn{
+padding:14px 30px;
+border:2px solid #222;
+background:transparent;
+cursor:pointer;
+font-weight:500;
+transition:0.4s;
+}
+
+.hero-btn:hover{
+background:#111;
+color:white;
+transform:translateY(-4px);
+}
+
+.hero-img{
+flex:1;
+text-align:right;
+opacity:0;
+transform:translateX(60px);
+transition:1.2s;
+}
+
+.hero-img img{
+width:85%;
+border-radius:15px;
+box-shadow:0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+font-size:44px;
+margin-bottom:20px;
+}
+
+/* AI SECTION */
+
+.ai-section{
+background:white;
+text-align:center;
+}
+
+.ai-section p{
+max-width:750px;
+margin:auto;
+line-height:1.8;
+color:#555;
+}
+
+/* DOCTOR */
+
+.doctor{
+display:flex;
+align-items:center;
+gap:60px;
+}
+
+.doctor img{
+width:260px;
+height:260px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.doctor-text{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.doctor-text p{
+line-height:1.8;
+color:#555;
+}
+
+/* SERVICES */
+
+.services{
+background:#fafafa;
+text-align:center;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-top:50px;
+}
+
+.service{
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.service:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* REVIEWS */
+
+.reviews{
+text-align:center;
+}
+
+.review-box{
+display:flex;
+gap:30px;
+margin-top:40px;
+}
+
+.review{
+flex:1;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+padding:70px 8%;
+margin-top:60px;
+}
+
+footer h4{
+margin-bottom:15px;
+}
+
+footer p{
+color:#ccc;
+line-height:1.7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-img{
+text-align:center;
+margin-top:40px;
+}
+
+.doctor{
+flex-direction:column;
+text-align:center;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.review-box{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">AI Maxillofacial Dentistry</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-text">
+<h1>Reveal<br>Your Best<br>Smile</h1>
+<p>AI-powered robotic dentistry delivering painless, precision-based maxillofacial treatments in Salem.</p>
+<button class="hero-btn">Book an Appointment</button>
+</div>
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+</div>
+</section>
+
+<section class="ai-section">
+<h2>Advanced AI & Robotic Dentistry</h2>
+<p>
+Our clinic uses imported foreign robotic systems and AI-based dental machines.
+Every treatment is digitally planned for maximum precision, minimal pain and faster recovery.
+From Invisalign alignments to complex implants, technology ensures unmatched accuracy.
+Experience the future of dentistry today.
+</p>
+</section>
+
+<section class="doctor">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<div class="doctor-text">
+<h2>Dr. Abu Imraan</h2>
+<p>
+Dr. Abu Imraan is a leading AI-assisted maxillofacial specialist known for combining advanced robotic systems with clinical excellence.
+He focuses on painless precision-driven treatments using imported foreign dental machines.
+His patient-first approach ensures comfort, safety and world-class results.
+With innovation at the core, he brings futuristic dentistry to Salem.
+</p>
+</div>
+</section>
+
+<section class="services">
+<h2>Our Dental Services</h2>
+<div class="service-grid">
+
+<div class="service">
+<h3>AI Guided Dental Implants</h3>
+<p>Robotic precision placement for long-lasting, natural results.</p>
+</div>
+
+<div class="service">
+<h3>Invisalign & Aligners</h3>
+<p>Digitally designed smile correction with advanced AI scanning.</p>
+</div>
+
+<div class="service">
+<h3>Cosmetic Smile Design</h3>
+<p>Enhance aesthetics and confidence with modern cosmetic care.</p>
+</div>
+
+</div>
+</section>
+
+<section class="reviews">
+<h2>5.0 ⭐ (23 Reviews)</h2>
+<p>Rated 5.0 on Google</p>
+
+<div class="review-box">
+
+<div class="review">
+<p>"Very neat clinic with advanced AI machines. Best painless treatment. Completely satisfied."</p>
+<strong>- Rithika Sri</strong>
+</div>
+
+<div class="review">
+<p>"High class dentistry at affordable price. Implant procedure was smooth and professional."</p>
+<strong>- Vaheetha Banu</strong>
+</div>
+
+</div>
+</section>
+
+<footer>
+<h4>Contact Us</h4>
+<p>
+AI Maxillofacial Dentistry<br>
+Ramakrishna Rd, Opp. Vijaya Hospital Petrol Pump,<br>
+Seerangapalayam, Salem – 636007<br><br>
+Open: 9:00 AM – 2:30 PM<br>
+5:00 PM – 9:00 PM
+</p>
+</footer>
+
+<script>
+
+// Navbar scroll effect
+window.addEventListener("scroll",function(){
+document.querySelector("nav").classList.toggle("scrolled",window.scrollY>50);
+});
+
+// Scroll reveal
+function reveal(){
+document.querySelectorAll(".hero-text,.hero-img,.doctor-text,.service,.review")
+.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.style.opacity="1";
+el.style.transform="translate(0)";
+}
+});
+}
+
+window.addEventListener("scroll",reveal);
+reveal();
+
+</script>
+
+</body>
+</html>
