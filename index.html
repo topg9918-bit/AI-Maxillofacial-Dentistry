@@ -64,7 +64,7 @@ color:#555;
 .hero-buttons{display:flex;gap:25px;}
 
 .btn{
-padding:18px 36px;   /* Bigger buttons */
+padding:18px 36px;
 border-radius:40px;
 border:none;
 font-weight:600;
@@ -81,10 +81,7 @@ transform:translateY(-4px);
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Move image little right */
-.hero-img{
-margin-left:40px;
-}
+.hero-img{margin-left:40px;}
 .hero-img img{
 width:75%;
 border-radius:15px;
@@ -110,29 +107,6 @@ max-width:900px;
 margin:auto;
 line-height:1.9;
 color:#555;
-}
-
-/* SERVICES */
-.services{text-align:center;background:#fafafa;}
-.service-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:40px;
-}
-
-.service{
-padding:30px;
-border-radius:15px;
-color:white;
-transition:0.4s;
-}
-.service:nth-child(1){background:#0f2a52;}
-.service:nth-child(2){background:#1f4068;}
-.service:nth-child(3){background:#162447;}
-.service:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(15,42,82,0.25);
 }
 
 /* DOCTOR */
@@ -222,7 +196,6 @@ box-shadow:0 10px 25px rgba(0,0,0,0.2);
 @media(max-width:900px){
 .hero{flex-direction:column;text-align:center;}
 .hero-img{margin:40px 0 0 0;}
-.service-grid{grid-template-columns:1fr;}
 .doctor{flex-direction:column;text-align:center;}
 .map{width:100%;}
 footer{flex-direction:column;}
@@ -250,7 +223,10 @@ Experience next-generation AI-powered robotic dentistry delivering surgical accu
 
 <div class="hero-buttons">
 <a href="#appointment"><button class="btn primary">Book Appointment</button></a>
+
+<a href="tel:+919999999999">
 <button class="btn secondary">Call Now</button>
+</a>
 </div>
 </div>
 
@@ -277,7 +253,7 @@ This integration of technology and expertise delivers truly futuristic dental ca
 <p>
 Dr. Abu Imraan is a highly skilled AI-assisted maxillofacial specialist with a strong reputation for precision and patient care.
 He combines advanced robotic systems with years of surgical expertise to deliver exceptional results.
-Patients appreciate his calm, transparent communication and commitment to painless treatment.
+Patients appreciate his calm approach, clear explanations and commitment to painless treatment.
 His focus on hygiene, innovation and accuracy ensures world-class standards in every procedure.
 With digital planning and modern techniques, he brings futuristic dentistry to Salem with confidence and care.
 </p>
@@ -316,7 +292,13 @@ allowfullscreen>
 </div>
 </footer>
 
-<a href="#" class="whatsapp">Chat on WhatsApp</a>
+<a 
+href="https://wa.me/919986800700?text=Good%20evening%20sir%2Fmam%2C%20this%20is%20AI%20Maxillofacial%20Dentistry..%20this%20is%20demo%20sir%20later%20we%20can%20add%20what%20you%20want%20us%20too."
+target="_blank"
+class="whatsapp">
+Chat on WhatsApp
+</a>
+
 <div class="location-badge">📍 Get Directions</div>
 
 </body>
