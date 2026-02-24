@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{font-family:'Poppins',sans-serif;background:#f5f1ea;color:#222;overflow-x:hidden;}
 
@@ -48,26 +47,29 @@ align-items:center;
 justify-content:space-between;
 padding:180px 8% 120px;
 }
+
 .hero-text h1{
 font-family:'Playfair Display',serif;
 font-size:62px;
 color:#0f2a52;
 margin-bottom:20px;
 }
+
 .hero-text p{
 max-width:500px;
 margin-bottom:30px;
 color:#555;
 }
 
-.hero-buttons{display:flex;gap:20px;}
+.hero-buttons{display:flex;gap:25px;}
 
 .btn{
-padding:14px 28px;
-border-radius:30px;
+padding:18px 36px;   /* Bigger buttons */
+border-radius:40px;
 border:none;
-font-weight:500;
+font-weight:600;
 cursor:pointer;
+font-size:16px;
 transition:0.3s;
 }
 
@@ -79,9 +81,12 @@ transform:translateY(-4px);
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Smaller Image */
+/* Move image little right */
+.hero-img{
+margin-left:40px;
+}
 .hero-img img{
-width:70%;
+width:75%;
 border-radius:15px;
 box-shadow:0 20px 50px rgba(0,0,0,0.15);
 }
@@ -92,7 +97,19 @@ h2{
 font-family:'Playfair Display',serif;
 font-size:40px;
 color:#0f2a52;
-margin-bottom:20px;
+margin-bottom:25px;
+}
+
+/* AI EXPLANATION */
+.ai-section{
+background:white;
+text-align:center;
+}
+.ai-section p{
+max-width:900px;
+margin:auto;
+line-height:1.9;
+color:#555;
 }
 
 /* SERVICES */
@@ -110,11 +127,9 @@ border-radius:15px;
 color:white;
 transition:0.4s;
 }
-
 .service:nth-child(1){background:#0f2a52;}
 .service:nth-child(2){background:#1f4068;}
 .service:nth-child(3){background:#162447;}
-
 .service:hover{
 transform:translateY(-10px);
 box-shadow:0 20px 50px rgba(15,42,82,0.25);
@@ -127,14 +142,14 @@ align-items:center;
 gap:60px;
 }
 .doctor img{
-width:220px;
-height:220px;
+width:230px;
+height:230px;
 border-radius:50%;
 object-fit:cover;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 .doctor-text p{
-line-height:1.8;
+line-height:1.9;
 color:#555;
 }
 
@@ -144,10 +159,15 @@ background:#0f2a52;
 color:white;
 padding:60px;
 border-radius:20px;
+text-align:center;
+}
+.appointment h2{
+color:white;
+margin-bottom:30px;
 }
 .appointment input{
 width:100%;
-padding:12px;
+padding:14px;
 margin-bottom:15px;
 border:none;
 border-radius:8px;
@@ -163,7 +183,7 @@ justify-content:space-between;
 flex-wrap:wrap;
 gap:40px;
 }
-footer p{color:#ccc;line-height:1.7;}
+footer p{color:#ccc;line-height:1.8;}
 
 .map{
 width:400px;
@@ -201,13 +221,12 @@ box-shadow:0 10px 25px rgba(0,0,0,0.2);
 /* RESPONSIVE */
 @media(max-width:900px){
 .hero{flex-direction:column;text-align:center;}
-.hero-img{text-align:center;margin-top:40px;}
+.hero-img{margin:40px 0 0 0;}
 .service-grid{grid-template-columns:1fr;}
 .doctor{flex-direction:column;text-align:center;}
 .map{width:100%;}
 footer{flex-direction:column;}
 }
-
 </style>
 </head>
 
@@ -226,15 +245,13 @@ footer{flex-direction:column;}
 <div class="hero-text">
 <h1>Precision. Innovation. Painless Care.</h1>
 <p>
-Experience AI-powered robotic dentistry delivering extreme accuracy,
-minimal discomfort and faster healing.
+Experience next-generation AI-powered robotic dentistry delivering surgical accuracy, safety and comfort.
 </p>
 
 <div class="hero-buttons">
 <a href="#appointment"><button class="btn primary">Book Appointment</button></a>
 <button class="btn secondary">Call Now</button>
 </div>
-
 </div>
 
 <div class="hero-img">
@@ -242,36 +259,15 @@ minimal discomfort and faster healing.
 </div>
 </section>
 
-<section class="services">
-<h2>Our Premium Services</h2>
-
-<div class="service-grid">
-
-<div class="service">
-<h3>AI Guided Dental Implants</h3>
+<section class="ai-section">
+<h2>Advanced AI & Robotic Dentistry</h2>
 <p>
-3D robotic precision placement.<br>
-Permanent natural-looking results.
+Our clinic uses imported foreign robotic surgical systems combined with AI-based 3D digital scanning technology.
+Every procedure is digitally mapped before treatment to ensure extreme precision and minimal human error.
+AI-guided navigation assists during implant placement and maxillofacial procedures for superior accuracy.
+High-resolution imaging and real-time data tracking enhance safety, reduce pain and accelerate healing.
+This integration of technology and expertise delivers truly futuristic dental care in Salem.
 </p>
-</div>
-
-<div class="service">
-<h3>Invisalign & Clear Aligners</h3>
-<p>
-Digitally designed invisible braces.<br>
-Comfortable and predictable alignment.
-</p>
-</div>
-
-<div class="service">
-<h3>Cosmetic Smile Design</h3>
-<p>
-Advanced aesthetic corrections.<br>
-Confident radiant smiles.
-</p>
-</div>
-
-</div>
 </section>
 
 <section class="doctor">
@@ -279,16 +275,18 @@ Confident radiant smiles.
 <div class="doctor-text">
 <h2>Dr. Abu Imraan</h2>
 <p>
-Dr. Abu Imraan combines advanced AI robotic precision with years of clinical expertise.
-Known for painless techniques and patient-focused care,
-he delivers world-class maxillofacial treatment in Salem.
+Dr. Abu Imraan is a highly skilled AI-assisted maxillofacial specialist with a strong reputation for precision and patient care.
+He combines advanced robotic systems with years of surgical expertise to deliver exceptional results.
+Patients appreciate his calm, transparent communication and commitment to painless treatment.
+His focus on hygiene, innovation and accuracy ensures world-class standards in every procedure.
+With digital planning and modern techniques, he brings futuristic dentistry to Salem with confidence and care.
 </p>
 </div>
 </section>
 
 <section id="appointment">
 <div class="appointment">
-<h2>Book Your Appointment</h2>
+<h2>Book an Appointment</h2>
 <input type="text" placeholder="Full Name">
 <input type="text" placeholder="Address">
 <input type="email" placeholder="Email">
@@ -303,7 +301,9 @@ he delivers world-class maxillofacial treatment in Salem.
 <p>
 AI Maxillofacial Dentistry<br>
 Opp. Vijaya Hospital Petrol Pump,<br>
-Seerangapalayam, Salem – 636007
+Seerangapalayam, Salem – 636007<br><br>
+Mobile: +91 99999 99999<br>
+Email: drabuimraan@gmail.com
 </p>
 </div>
 
